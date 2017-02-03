@@ -1,0 +1,91 @@
+// --- --- ---
+// Breakpoints
+// --- --- ---
+
+// Breakpoint makes writing media queries in Sass super simple.
+// http://breakpoint-sass.com/
+// https://github.com/at-import/breakpoint
+// https://github.com/at-import/breakpoint/wiki
+
+@import "breakpoint";
+@import "memo";
+
+// List
+
+// Foundation 6
+// Small: any screen
+// Medium: any screen 640 pixels or wider
+// Large: any screen 1024 pixels or wider
+// XLarge: any screen 1440 pixels or wider
+// XXLarge: any screen 1920 pixels or wider
+
+// $small-only: max-width 40em;
+// $medium-only: 40.063em 64em;
+// $large-only: 64.063em 90em;
+// $xlarge-only: 90.063em 120em;
+
+// $medium-down: max-width 64em;
+// $large-down: max-width 90em;
+// $xlarge-down: max-width 120em;
+
+// $medium-up: 40.063em;
+// $large-up: 64.063em;
+// $xlarge-up: 90.063em;
+// $xxlarge-up: 120.063em;
+
+// --- --- ---
+
+// Bootstrap 4
+// Extra small devices (portrait phones): less than 34em
+// Small devices (landscape phones): less than 48em
+// Medium devices (tablets): less than 62em
+// Large devices (desktops: less than 75em
+
+// $xsmall-only: max-width 33.9em;
+// $small-only: 48em 61.9em;
+// $medium-only: 62em 74.9em;
+
+// $small-down: max-width 61.9em;
+// $medium-down: max-width 74.9em;
+
+// $small-up: 48em;
+// $medium-up: 62em;
+// $large-up: 75em;
+
+// --- --- ---
+	
+// Bootstrap 3
+// Extra small devices (phones): up to 480px
+// Small devices (tablets): 768px and up
+// Medium devices (desktops): 992px and up
+// Large devices (large desktops): 1200px and up
+
+// $xsmall-only: max-width 480px;
+// $small-only: 481px 768px;
+// $medium-only: 769px 992px;
+
+// $small-down: max-width 768px;
+// $medium-down: max-width 992px;
+
+// $small-up: 481px;
+// $medium-up: 769px;
+// $large-up: 1201px;
+
+// --- --- ---
+
+// Semantic UI
+// Mobile: below 768px
+// Tablet: 768px - 991px
+// Small Monitor: 992px - 1200px
+// Large Monitor: above 1200px
+
+// $mobile-only: max-width 767px;
+// $tablet-only: 768px 991px;
+// $small-only: 992px 1200px;
+
+// $tablet-down: max-width 991px;
+// $small-down: max-width 1200px;
+
+// $tablet-up: 768px;
+// $small-up: 992px;
+// $large-up: 1201px;

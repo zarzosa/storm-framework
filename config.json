@@ -1,0 +1,48 @@
+{
+  "path": {
+    "source": "src",
+    "distribution": "dist",
+    "build": "build",
+    "styles":  {
+      "source": "/styles",
+      "distribution": "/css"
+    },
+    "scripts": {
+      "source": "/scripts",
+      "distribution": "/js"
+    },
+    "pages": {
+      "source": "/pages",
+      "distribution": ""
+    },
+    "images": {
+      "source": "/images",
+      "distribution": "/images"
+    }
+  },
+  "styles": {
+    "sass": {
+      "outputStyle" : "nested",
+      "includePaths" : [
+	      "bower_components/breakpoint-sass/stylesheets",
+				"bower_components/sassy-maps/sass",
+				"bower_components/normalize-css",
+				"bower_components/bourbon/app/assets/stylesheets",
+				"bower_components/neat/app/assets/stylesheets",
+				"bower_components/bitters/core"
+	     ]
+    },
+    "autoprefixer": {
+      "browsers": ["last 2 versions"],
+      "cascade": false
+    },
+    "cleancss": {
+      "keepBreaks": false
+    }
+  },
+  "pages": {
+    "htmlmin": {
+      "collapseWhitespace": true
+    }
+  }
+}

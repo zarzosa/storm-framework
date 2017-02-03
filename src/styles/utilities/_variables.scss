@@ -1,0 +1,43 @@
+// --- --- ---
+// Variables
+// --- --- ---
+
+// Color Palette
+$white: #fff;
+$gray: #f9f9f9;
+$black: #4a4a4a;
+// Palette Town
+$color: #1de9b6;
+@include palette-town($color, complement);
+
+// Typography
+// utilities/typography
+$body-font-size: 16px;
+$lato: 'Lato', sans-serif;
+
+// Grid (Neat)
+$column: 4.2358em;
+$gutter: 1.618em;
+$grid-columns: 12;
+$max-width: 1280px;	
+$border-box-sizing: true; 
+$default-feature: min-width;
+$default-layout-direction: LTR;
+// Visual Grid (Neat)
+$visual-grid: false;
+$visual-grid-color: #eee;
+$visual-grid-index: back;
+$visual-grid-opacity: 0.4;
+$visual-grid-breakpoints: ();
+
+// Breakpoints
+// utilities/breakpoints
+
+// Bourbon
+$asset-pipeline: false;
+$em-base: $body-font-size;
+$prefix-for-webkit:    true;
+$prefix-for-mozilla:   true;
+$prefix-for-microsoft: true;
+$prefix-for-opera:     true;
+$prefix-for-spec:      true;
