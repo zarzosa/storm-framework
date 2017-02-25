@@ -10,7 +10,9 @@ var gulp = require('gulp'),
 			replaceString: /\bgulp[\-.]/,
 			lazy: true,
 			camelize: true
-		})
+		});
+
+var browserSync = require('browser-sync').create();
 
 // Config
 var config = require('./config.json');
@@ -29,16 +31,22 @@ gulp.task('default', function() {
 
 // Dev Task
 gulp.task('dev', function() {
-	runSequence(
+	if (config.sync.enabled){
+		runSequence(
+			'pages', ['styles', 'scripts', 'images', 'watch'], 'browser-sync'
+		);
+	}else{
+		runSequence(
 			'pages', ['styles', 'scripts', 'images', 'watch']
-	);
+		);
+	}
 });
 
 // Build Task
 gulp.task('build', function() {
 	build = true;
 	runSequence(
-			'pages', ['styles', 'scripts', 'images']
+		'pages', ['styles', 'scripts', 'images'], 'webstandards'
 	);
 });
 
@@ -60,7 +68,8 @@ gulp.task('sass', function() {
 				outputStyle: config.styles.sass.outpuStyle,
 				includePaths: config.styles.sass.includePaths
 		}))
-		.pipe(gulp.dest(config.path.distribution+config.path.styles.distribution));
+		.pipe(gulp.dest(config.path.distribution+config.path.styles.distribution))
+		.pipe(browserSync.stream());
 });
 // Autoprefixer (Build)
 gulp.task('autoprefixer', function() {
@@ -169,8 +178,8 @@ gulp.task('copy-images', function() {
 // - WATCH -
 gulp.task('watch', function() {
 	gulp.watch(config.path.source+config.path.styles.source+'/**/*.scss', ['styles']);
-	gulp.watch(config.path.source+config.path.scripts.source+'/**/*.js', ['scripts']);
-	gulp.watch(config.path.source+config.path.pages.source+'/**/*.html', ['pages']);
+	gulp.watch(config.path.source+config.path.scripts.source+'/**/*.js', ['scripts']).on('change', browserSync.reload);
+	gulp.watch(config.path.source+config.path.pages.source+'/**/*.html', ['pages']).on('change', browserSync.reload);
 	gulp.watch(config.path.source+config.path.images.source+'/**/*.{jpg,jpeg,png,gif,svg}', ['images']);
 });
 
@@ -180,4 +189,19 @@ gulp.task('watch', function() {
 gulp.task('webstandards', function () {
   return gulp.src(config.path.distribution+'/**/*')
   	.pipe(plugins.webstandards());
+});
+
+// --- --- --- SYNC --- --- --- //
+
+// - BrowserSync -
+gulp.task('browser-sync', function() {
+    browserSync.init({
+        server: {
+            baseDir: config.path.distribution
+        },
+				port: config.sync.browserSync.options.port,
+				ui: {
+					port: config.sync.browserSync.options.ui.port
+				}
+    });
 });

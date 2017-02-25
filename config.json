@@ -24,11 +24,10 @@
     "sass": {
       "outputStyle" : "nested",
       "includePaths" : [
-	      "bower_components/breakpoint-sass/stylesheets",
 				"bower_components/sassy-maps/sass",
 				"bower_components/normalize-css",
 				"bower_components/bourbon/app/assets/stylesheets",
-				"bower_components/neat/app/assets/stylesheets",
+				"bower_components/neat/core",
 				"bower_components/bitters/core"
 	     ]
     },
@@ -43,6 +42,17 @@
   "pages": {
     "htmlmin": {
       "collapseWhitespace": true
+    }
+  },
+  "sync": {
+    "enabled": true,
+    "browserSync": {
+      "options": {
+        "port": 3000,
+        "ui": {
+          "port": 3001
+        }
+      }
     }
   }
 }

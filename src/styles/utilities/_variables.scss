@@ -7,31 +7,22 @@ $white: #fff;
 $gray: #f9f9f9;
 $black: #4a4a4a;
 // Palette Town
-$color: #1de9b6;
-@include palette-town($color, complement);
+$color: #35BDB2;
+@include palette-town($color, all);
 
 // Typography
 // utilities/typography
 $body-font-size: 16px;
 $lato: 'Lato', sans-serif;
 
-// Grid (Neat)
-$column: 4.2358em;
-$gutter: 1.618em;
-$grid-columns: 12;
-$max-width: 1280px;	
-$border-box-sizing: true; 
-$default-feature: min-width;
-$default-layout-direction: LTR;
-// Visual Grid (Neat)
-$visual-grid: false;
-$visual-grid-color: #eee;
-$visual-grid-index: back;
-$visual-grid-opacity: 0.4;
-$visual-grid-breakpoints: ();
+// Grid
+// utilities/grid
+$grid-max-width: 1170px;
 
-// Breakpoints
-// utilities/breakpoints
+// General
+$margin: 15px;
+$border: 1px;
+$radius: 3px;
 
 // Bourbon
 $asset-pipeline: false;

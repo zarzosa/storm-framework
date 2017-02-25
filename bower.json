@@ -20,9 +20,8 @@
     "tests"
   ],
   "devDependencies": {
-    "breakpoint-sass": "^2.7.1",
     "bourbon": "^4.3.0",
     "normalize-css": "^5.0.0",
-    "neat": "^1.8.0"
+    "neat": "^2.0.0"
   }
 }

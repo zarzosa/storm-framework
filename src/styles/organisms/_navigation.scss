@@ -3,5 +3,34 @@
 // --- --- ---
 
 .navigation{
-	
+	@include grid-container;
+	margin: $margin;
+
+	&__logo{
+		@include grid-column(2);
+	}
+
+	&__menu{
+		@include grid-column(10);
+	}
+
+	ul{
+		padding: 0;
+		margin: 0;
+		text-align: right;
+		li{
+			list-style: none;
+			display: inline-block;
+			margin-right: $margin;
+			&:last-child{
+				margin-right: 0;
+			}
+			a{
+				color: $black;
+				&:hover{
+					color: $color-primary;
+				}
+			}
+		}
+	}
 }

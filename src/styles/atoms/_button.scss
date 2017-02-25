@@ -4,5 +4,23 @@
 
 button,
 .button{
-	
+	color: $white;
+	background: $color-primary;
+	padding: $margin/1.5 $margin ;
+	border: $border solid $color-primary;
+	border-radius: $radius;
+	&:hover{
+		color: $color-primary;
+		background: transparent;
+		text-decoration: none;
+	}
+
+	&.unfill{
+		color: $color-primary;
+		background: $white;
+		&:hover{
+			color: $white;
+			background: $color-primary;
+		}
+	}
 }

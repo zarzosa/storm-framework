@@ -5,12 +5,12 @@
 a{
 	color: $color-primary;
 	text-decoration: none;
-	
-	&:hover{
 
+	&:hover{
+		text-decoration: underline;
 	}
 
 	&:visited{
-		
+
 	}
 }

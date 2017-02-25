@@ -1,0 +1,37 @@
+// --- --- ---
+// Grid
+// --- --- ---
+
+// Neat
+// http://neat.bourbon.io/
+// http://neat.bourbon.io/docs/latest/
+// https://github.com/thoughtbot/neat/
+$neat-grid: (
+  columns: 12,
+  gutter: 20px
+);
+$medium: (
+  columns: 6,
+  gutter: 20px,
+  media: '(max-width: 1024px)'
+);
+$small: (
+  columns: 4,
+  gutter: 20px,
+  media: '(max-width: 678px)'
+);
+$xsmall: (
+  columns: 3,
+  gutter: 20px,
+  media: '(max-width: 480px)'
+);
+
+// General
+.container{
+  max-width: $grid-max-width;
+  padding: $margin;
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}

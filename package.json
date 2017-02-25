@@ -1,12 +1,13 @@
 {
   "name": "storm-framework",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Front-end Framework.",
   "main": "gulpfile.js",
   "repository": {},
   "author": "Emmanuel Zarzosa",
   "license": "MIT",
   "dependencies": {
+    "browser-sync": "^2.18.8",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-cleancss": "^0.2.2",
